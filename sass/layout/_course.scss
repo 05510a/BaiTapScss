@@ -1,0 +1,83 @@
+.courses {
+    .course__content {
+        .row {
+            margin: auto;
+            .col-md-4 {
+                background-color: $color-gray-5;
+                
+                 padding:15% 20px 0px;
+                h2 {
+                    @include styleText($fs-2 - 1, $color-black-0, $fw-bold-1);
+                }
+                p {
+                    @include styleText($fs-0 + 1, $color-black-0, $fw-normal);
+                }
+            }
+            .mytab {
+                .nav {
+                    justify-content: space-between;
+                    flex-wrap: nowrap;
+                    border: none;
+                    
+                    .nav-item {
+                        border-bottom: 1px solid $color-gray-3;
+                        &:hover {
+                            
+                        .nav-link {
+                                
+                                border: none;
+                            }
+                        }
+                         
+                        .nav-link {
+                            @include styleText($fs-0, $color-black-0, $fw-normal);
+                            border: none;
+                            position: relative;
+                            height: 100%;
+                        }
+                        .nav-link.active{
+                            border-bottom: 5px solid $color-blue;
+                        } 
+                        
+                    }
+                }
+                .tab-content{
+                    position: relative;
+                    margin-top: $mg-2;
+                    .card-title{
+                        @include styleText($fs-0, $color-black-0, $fw-bold);
+                    }
+                    .card-text{
+                        @include styleText($fs-1, $color-gray-4, $fw-normal);
+                    }
+                    .rating{
+                        display: flex;
+                        .rating_star{
+                            margin-right: $mg-0;
+                            @include styleText($fs-1, $color-yellow, $fw-normal);
+                        }
+                        span:nth-child(2){
+                            @include styleText($fs-1, $color-gray-4, $fw-bold);
+                            margin-right: $mg-0;
+                        }
+                        span:last-child{
+                            @include styleText($fs-1, $color-gray-4, $fw-normal);
+                        }
+                    }
+                    .price{
+                        text-align: right;
+                        .oldPrice{
+                            @include styleText($fs-1, $color-gray-4, $fw-normal);
+                            text-decoration: line-through;
+                            margin-right: $mg-1;
+                        }
+                        .newPrice{
+                            @include styleText($fs-0, $color-black-0, $fw-bold);
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

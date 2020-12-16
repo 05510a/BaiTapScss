@@ -1,0 +1,57 @@
+.footer{
+    padding-top: $pd-2*1.5;
+    .footer__content{
+        .footer_head{
+            border-bottom: 1px solid $color-gray-3;
+        .product{
+            
+            padding: 0 $pd-2;
+            .row{
+                border-bottom: none;
+                ul{
+                    list-style: none;
+                    li{
+                        margin-bottom: $mg-1;
+                        @include styleText($fs-1, $color-blue,$fw-bold-0 -200);
+                        transition: all 0.5s;
+                        &:hover{
+                            cursor: pointer;
+                            color:$color-black-0;
+                        }
+                    }
+                    .Udemy, .Teach{
+                        @include styleText($fs-1, $color-blue,$fw-bold-1)
+                    }
+                }
+            }
+        }}
+        .footer_end{
+            padding: $pd-2*2 $pd-1;
+            border:none!important;
+            .col-6{
+                span{
+                    @include styleText($fs-1, $color-gray-4, $fw-normal);
+                }
+            img{
+                width: 110px;
+                height: 32px;
+                margin-right: $mg-2;
+                &:hover{
+                    cursor: pointer;
+                }
+            }}
+            .footer__endright{
+                text-align: right;
+                span{
+                    @include styleText($fs-1, $color-blue,$fw-bold-0 -200);
+                    margin-right: $mg-2;
+                    &:hover{
+                        cursor: pointer;
+                        color: #003845;
+                    }
+                }
+            }
+        }
+    }
+
+}

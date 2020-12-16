@@ -1,0 +1,76 @@
+.Feedbacks {
+    background-color: $color-white-cream;
+    .feedback__content {
+        h3 {
+            padding-top: $pd-2;
+            @include styleText($fs-3, $color-black-0, $fw-bold-1);
+        }
+        .feedbackItem {
+            padding: $pd-2 0;
+            .row {
+                .item {
+                    
+                    .card {
+                        
+                        height: 100%;
+                        padding: $pd-2;
+                        background-color: $color-white-0;
+                        .row{
+                            margin-bottom: $mg-2;
+                        img {
+                            width: 64px;
+                            height: 64px;
+                            border-radius: 50%;
+                            margin: 0 $mg-1 + 4;
+                        }
+                        span:first-of-type {
+                            @include styleText($fs-1 + 3, $color-black-0, $fw-bold-1);
+                            line-height: 64px   ;
+                        }}
+                        .avatarK {
+                            border-radius: 1px solid $color-gray-4;
+                            background-color: $color-gray-4;
+                            width: 64px;
+                            height: 64px;
+                            border-radius: 50%;
+
+                            align-items: center;
+                            margin: 0;
+                            margin: 0 $mg-1 +4 ;
+
+                            span {
+                                color: white!important;
+                                display: block;
+                                text-align: center;
+                                width: 100%;
+                                height: 100%;
+                                line-height: 64px;
+                                @include styleText($fs-2 - 2, $color-white-0, $fw-bold-1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.feedback__content{
+    .feedbackItem{
+        @include resposive("large"){
+            
+            .item2{
+            display: none;
+            }
+
+        
+        }
+        @include resposive("small"){
+            
+            .item3{
+            display: none;
+            }
+            
+        
+        }
+    }
+}

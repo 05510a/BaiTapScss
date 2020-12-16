@@ -1,0 +1,78 @@
+@mixin styleText($fs,$color,$fw) {
+    font-size:$fs ;
+    color:$color ;
+    font-weight:$fw ;
+}
+@mixin styleFormSearch($bg-color,$bd-color,$bd-focus){
+    .input-group {
+        background-color:$bg-color;
+        border: 1px solid $bd-color;
+
+        .form-control {
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none;
+            transition: none;
+            &:focus {
+                
+                background-color: $color-white-0;
+                border-color:$bd-focus;
+                border-right-color: transparent;
+                & + .input-group-append {
+                    .input-group-text {
+                        border: 1px solid $bd-focus;
+
+                        background-color: $color-white-0;
+                        
+                        border-left-color: transparent;
+                        &:hover {
+                            background-color: $color-red-0;
+                            color: $color-white-0;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+       
+        .input-group-text {
+            background-color: transparent;
+            border: unset;
+            color: $color-red-0;
+            &:hover {
+                background-color: $color-red-0;
+                color: $color-white-0;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+@mixin  styleButton($bg-color,$border,$pd-y,$pd-x,$radius) {
+    background-color:$bg-color;
+    border: 1px solid $border;
+    padding: $pd-y $pd-x;
+    border-radius: $radius;
+    cursor: pointer;
+    
+}
+@mixin styleButtonHover($color,$color-bg,$border){
+    color: $color;
+    background-color: $color-bg;
+    border-color:$border;
+}
+// screen:small, medium...
+@mixin resposive($screen){
+    //kiem tra screen co ton tai trong $breakponit hay ko
+    @if( map-has-key($map:$breakpoints , $key:$screen )){
+        // Nếu tìm thấy
+        //Lấy giá trị của screen gán vào cho biến $value
+        $value: map-get($map:$breakpoints , $key:$screen );
+     @media screen and (max-width:$value) {
+         @content;
+     }
+    }
+    @else{
+        @warn 'Screem ko tồn tại';
+    }
+}

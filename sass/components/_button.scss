@@ -1,0 +1,39 @@
+.ude-btnwhite {
+    @include styleButton($color-white-0, $color-gray-4, $pd-1 + 1, $pd-1 + 2, $border-radius);
+    @include styleText(15px, $color-gray-4, $fw-bold);
+}
+.ude-btnblack {
+    @include styleButton($color-red-0, $color-red-0, $pd-1 + 1, $pd-1 + 2, $border-radius);
+    @include styleText(15px, $color-white-0, $fw-bold);
+    &:hover {
+        @include styleButtonHover($color-white-0, $color-red-1, $color-red-1);
+    }
+}
+.banner{
+    button{
+        @include styleButton($color-red-0 , $color-red-0 , $pd-1 , $pd-1 +2,$border-radius);
+        @include styleText($fs-1+2 ,$color-white-0, $fw-bold-1);
+        
+        transition: all 0.5s;
+        &:hover{
+            @include styleButtonHover($color-red-1, $color-red-1, $color-red-1);
+           
+        }
+    }
+}
+.partner__content{
+    .details{
+        button{
+            @include styleText($fs-1 + 2 , $color-white-0, $fw-bold-1);
+            @include styleButton($color-red-0 , $color-red-0 , $pd-1 , $pd-1 +2,$border-radius);
+            margin-left: 30%;
+            transition: all 0.5s;
+            &:hover{
+                @include styleButtonHover($color-red-1, $color-red-1, $color-red-1);
+                @include styleText($fs-1 + 2 , $color-white-0, $fw-bold-1);
+            } 
+        }
+        
+    }
+}
+

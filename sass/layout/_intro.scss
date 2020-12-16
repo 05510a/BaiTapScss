@@ -1,0 +1,26 @@
+.intro{
+    .Carousel__channel{
+        background:linear-gradient(to left, $color-red-0,$color-purple);
+            .container{
+            margin: auto;
+            .col-4{
+                padding: $pd-1 0;
+                    .icon{
+                    @include styleText(47px,$color-white-0,bold);
+                    margin-right: $mg-2;
+                                }
+                .icon_content{
+                  padding-top: $pd-1;
+                    p:first-child{
+                        @include styleText($fs-0+2,$color-white-0,bold);
+                     margin-bottom: 0;
+                    }
+                    p:last-child{
+                        @include styleText($fs-0+2,$color-white-0,$fw-normal);
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.students{
+    margin-top: $mg-2;
+    .student__content{
+        
+        margin: 0 auto;
+        h3{
+            @include styleText($fs-2,$color-black-light,$fw-normal);
+        }
+        .card-title{
+            @include styleText($fs-0, $color-black-0, $fw-bold);
+        }
+        .card-text{
+            @include styleText($fs-1, $color-gray-4, $fw-normal);
+        }
+        .rating{
+            display: flex;
+            .rating_star{
+                margin-right: $mg-0;
+                @include styleText($fs-1, $color-yellow, $fw-normal);
+            }
+            span:nth-child(2){
+                @include styleText($fs-1, $color-gray-4, $fw-bold);
+                margin-right: $mg-0;
+            }
+            span:last-child{
+                @include styleText($fs-1, $color-gray-4, $fw-normal);
+            }
+        }
+        .price{
+            text-align: right;
+            .oldPrice{
+                @include styleText($fs-1, $color-gray-4, $fw-normal);
+                text-decoration: line-through;
+                margin-right: $mg-1;
+            }
+            .newPrice{
+                @include styleText($fs-0, $color-black-0, $fw-bold);
+            }
+        }
+    }
+}

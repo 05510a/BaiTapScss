@@ -1,0 +1,46 @@
+.header__left {
+    display: flex;
+
+    .navbar-brand {
+        // flex-grow: 1;
+        // flex-grow: ;
+        img {
+            width: 110px;
+        }
+    }
+    .Categories {
+        align-self: center;
+        margin-right: 5px;
+    }
+    .header__form {
+        flex-grow: 1;
+        @include styleFormSearch($color-white-cream,$color-white-cream,$color-gray-6);
+    }
+}
+.header__right{
+//responsive
+@include resposive("extra-large"){
+    //content trong cái này nó sẽ nhét nội dung dưới này qua chỗ @ content mixin
+    .business, .teach{
+    display: none;
+    }
+
+}
+}
+//responsive
+@include resposive("medium"){
+    .header__left{
+        justify-content: center;
+        .header__form, .Categories{
+            display: none;
+        }
+    }
+    .header__right{
+        .btn-groups{
+            display: none;
+        }
+    }
+    }
+
+
+//responsive

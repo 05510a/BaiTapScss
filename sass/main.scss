@@ -1,0 +1,28 @@
+// chỉ chứa đường dẫn
+// Helper
+@import './Helper/_variables';
+@import './Helper/_mixin';
+@import './Helper/_extend';
+
+@import './base/reset';
+//  có import file sass của thư viện để trên đây
+// vendors
+
+// base
+@import './base/_customize';
+
+// component
+@import './components/_button';
+
+// layout
+@import './layout/_header';
+@import './layout/_carousel.scss';
+@import './layout/_intro.scss';
+@import './layout/_course.scss';
+@import './layout/_students';
+@import './layout/_banner';
+@import './layout/_topcategories';
+@import './layout/_Feedbacks';
+@import './layout/_partner';
+@import './layout/_footer';
+// Theme
